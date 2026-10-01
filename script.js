@@ -39,7 +39,37 @@ function menorEMaiorAltura() {
 
 // 3) Desenvolver um algoritmo que leia um número não determinado de valores e calcule e escreva a média aritmética dos valores lidos, a quantidade de valores positivos, a quantidade de valores negativos e o percentual de valores negativos e positivos.
 function mediaAritmetica() {
+    let soma = 0;
+    let quantidadePositivos = 0;
+    let quantidadeNegativos = 0;
+    let quantidadeValores = 0;
+    let valor = 10;
+    
+    while (valor > -8) {
+        soma += valor;
+        quantidadeValores++
 
+        if (valor > 0) {
+            quantidadePositivos++
+        } else {
+            quantidadeNegativos++
+        }
+        valor -= 1;
+    }
+
+    const mediaAritimetica = soma / quantidadeValores;
+    const percentualPositivos = (quantidadePositivos / quantidadeValores) * 100;
+    const percentualNegativos = (quantidadeNegativos / quantidadeValores) * 100;
+    
+    alert(`
+        Quantidade de valores lidos: ${quantidadeValores}
+        Soma dos valores lidos: ${soma}
+        Média aritmética: ${mediaAritimetica}
+        Quantidade de valores positivos: ${quantidadePositivos}
+        Percentual de valores positivos: ${percentualPositivos.toFixed(2)}%
+        Quantidade de valores negativos: ${quantidadeNegativos}
+        Percentual de valores negativos: ${percentualNegativos.toFixed(2)}%
+    `)
 }
 
 // 4) Escrever um algoritmo que leia uma quantidade desconhecida de números e conte quantos deles estão nos seguintes intervalos: [0-25], [26-50], [51-75] e [76-100]. A entrada de dados deve terminar quando for lido um número negativo.
@@ -49,7 +79,7 @@ function quantidadeNosIntervalos() {
 
 // 5) Faça um algoritmo estruturado que leia uma quantidade não determinada de números positivos. Calcule a quantidade de números pares e ímpares, a média de valores pares e a média geral dos números lidos. O número que encerrará a leitura será zero.
 function algoritmoEstruturado() {
-
+    
 }
 
 // 6) Escrever um algoritmo que gera e escreve os números ímpares entre 100 e 200.
