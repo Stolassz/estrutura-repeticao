@@ -79,7 +79,44 @@ function quantidadeNosIntervalos() {
 
 // 5) Faça um algoritmo estruturado que leia uma quantidade não determinada de números positivos. Calcule a quantidade de números pares e ímpares, a média de valores pares e a média geral dos números lidos. O número que encerrará a leitura será zero.
 function algoritmoEstruturado() {
-    
+    let valores = {
+        primeiro: 3,
+        segundo: 5,
+        terceiro: 9,
+        quarto: 6,
+        quinto: 10,
+        encerramento: 0}
+    let pares = 0;
+    let impares = 0;
+    let somaPares = 0;
+    let somaTotal = 0;
+    let quantidade = 0;
+
+    for (chave in valores) {
+        const valor = valores[chave];
+        if (valor === 0) {
+            break;
+        }
+
+        quantidade++;
+        somaTotal += valor;
+
+        if (valor % 2 === 0) {
+            pares++;
+            somaPares += valor;
+        } else {
+            impares++;
+        }
+
+        mediaPares = somaPares / pares;
+        mediaGeral = somaTotal / quantidade;
+    }
+    alert(`
+        Quantidade de números pares: ${pares}
+        Quantidade de números ímpares: ${impares}
+        Média dos valores pares: ${mediaPares.toFixed(2)}
+        Média geral dos números lidos: ${mediaGeral.toFixed(2)}
+    `)
 }
 
 // 6) Escrever um algoritmo que gera e escreve os números ímpares entre 100 e 200.
