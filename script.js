@@ -7,13 +7,33 @@ function somaImpares() {
             soma += i;
         }
     }
-    alert("A soma dos ímpares e multiplos de 3 no conjunto de 1 à 500 é: " + soma)
+    alert("A soma dos ímpares e multiplos de 3 no conjunto de 1 à 500 é: " + soma);
 }
 
 // 2) Desenvolver um algoritmo que leia a altura de 15 pessoas. Este programa deverá calcular e mostrar :
 // a. A menor altura do grupo;
 // b. A maior altura do grupo;
 function menorEMaiorAltura() {
+    const quantidadeAlturas = 15;
+    let alturas = [1.80, 1.75, 1.55, 1.50, 1.67, 1.85, 1.86, 1.98, 1.60, 1.72, 1.53, 1.64, 1.83, 1.59, 1.95];
+    
+    let menor = alturas[0];
+    let maior = alturas[0];
+
+    for (let altura of alturas) {
+        if (altura < menor) {
+            menor = altura;
+        }
+        
+        if (altura > maior) {
+            maior = altura;
+        }
+    }
+    alert(`
+        A quantidade de alturas lidas foi: ${quantidadeAlturas}.
+        A menor altura é: ${menor}.
+        A maior altura é: ${maior}`);
+    
 
 }
 
